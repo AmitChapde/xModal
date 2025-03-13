@@ -32,26 +32,26 @@ function Modal() {
       return;
     }
     if (!email) {
-      alert("Invalid email");
+      alert("Invalid email. Please check your email address.");
       return;
     }
     if (!phone) {
-      alert("Invalid phone number");
+      alert("Invalid phone number. Please enter a 10-digit phone number.");
       return;
     }
     if (!dob) {
-      alert("Invalid date of birth");
+      alert("Invalid date of birth.");
       return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      alert("Invalid email");
+      alert("Invalid email. Please check your email address.");
       return;
     }
 
     if (!/^\d{10}$/.test(phone)) {
-      alert("Invalid phone number");
+      alert("Invalid phone number. Please enter a 10-digit phone number.");
       return;
     }
 
@@ -59,7 +59,7 @@ function Modal() {
     const currentDate = new Date();
     currentDate.setHours(0, 0, 0, 0);
     if (selectedDate > currentDate) {
-      alert("Invalid date of birth");
+      alert("Invalid date of birth.");
       return;
     }
 
