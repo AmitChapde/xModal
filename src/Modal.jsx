@@ -32,37 +32,34 @@ function Modal() {
       return;
     }
     if (!email) {
-      alert("Please fill in the Email field.");
+      alert("Invalid email");
       return;
     }
     if (!phone) {
-      alert("Please fill in the Phone Number field.");
+      alert("Invalid phone number");
       return;
     }
     if (!dob) {
-      alert("Please fill in the Date of Birth field.");
+      alert("Invalid date of birth");
       return;
     }
 
-    
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      alert("Invalid email. Please check your email address.");
+      alert("Invalid email");
       return;
     }
 
-    
     if (!/^\d{10}$/.test(phone)) {
-      alert("Invalid phone number. Please enter a 10-digit phone number.");
+      alert("Invalid phone number");
       return;
     }
 
-    
     const selectedDate = new Date(dob);
     const currentDate = new Date();
-    currentDate.setHours(0, 0, 0, 0); 
+    currentDate.setHours(0, 0, 0, 0);
     if (selectedDate > currentDate) {
-      alert("Invalid date of birth. Please select a past date.");
+      alert("Invalid date of birth");
       return;
     }
 
