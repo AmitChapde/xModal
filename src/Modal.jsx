@@ -81,6 +81,7 @@ function Modal() {
             <input
               type="text"
               id="username"
+              required
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
@@ -89,6 +90,7 @@ function Modal() {
             <input
               type="email"
               id="email"
+              required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -97,6 +99,7 @@ function Modal() {
             <input
               type="tel"
               id="phone"
+              required
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
             />
@@ -105,6 +108,7 @@ function Modal() {
             <input
               type="date"
               id="dob"
+              required
               value={dob}
               onChange={(e) => setDob(e.target.value)}
             />
